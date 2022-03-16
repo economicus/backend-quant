@@ -13,3 +13,7 @@ WORKDIR /app
 
 RUN python -m pip install --upgrade pip && \
     pip install -r requirements.txt
+
+RUN wget https://raw.githubusercontent.com/economicus/backend-proto/main/py/quant_pb2.py -O proto/quant_pb2.py && \
+		wget https://raw.githubusercontent.com/economicus/backend-proto/main/py/quant_pb2_grpc.py -O proto/quant_pb2_grpc.py
+
