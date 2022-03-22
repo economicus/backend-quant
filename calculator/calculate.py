@@ -163,8 +163,8 @@ class Calculate(DataLoad):
             self.prf = prf
             profits.append(profit * 100)
         if len(profits) != 12:
-            return [0] * 12
-        return (profits)
+            return [0.0] * 12
+        return profits
 
     def calculate_each_term(self, codes, ref_date):
         if len(codes) == 0:
